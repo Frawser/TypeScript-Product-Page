@@ -5,7 +5,7 @@ import CartProduct from './CartProduct'
 import { formatCurrency } from '../utilities/currency'
 import storeProduct from '../data/products.json'
 
-// Define the ShoppingCart component
+
 type ShoppingCartProps = {
   cartOpen: boolean
 }
@@ -50,6 +50,6 @@ const ShoppingCart = ({ cartOpen }: ShoppingCartProps) => {
   );
 };
 
-// Export the ShoppingCart component as the default export
+
 export default ShoppingCart;
 

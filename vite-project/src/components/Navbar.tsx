@@ -8,8 +8,6 @@ import {
 } from "react-bootstrap";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { useEffect } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 
 // Define the Navbar component
 const Navbar = () => {
@@ -53,6 +51,5 @@ const Navbar = () => {
   );
 };
 
-// Export the Navbar component as the default export
 export default Navbar;
 

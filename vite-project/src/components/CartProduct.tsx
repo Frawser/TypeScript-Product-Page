@@ -55,6 +55,6 @@ const CartProduct = ({ id, quantity }: CartProductProps) => {
   )
 };
 
-// Export the CartProduct component as the default export
+
 export default CartProduct;
 

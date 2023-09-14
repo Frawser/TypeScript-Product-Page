@@ -1,24 +1,42 @@
-import React from 'react';
 import { Container } from 'react-bootstrap';
-import { useParams } from 'react-router-dom'; // Import useParams
+import { useParams } from 'react-router-dom';
 import ProductDetail from '../components/ProductDetail';
 import products from '../data/products.json';
 
+// Create the ProductsDetailPage component
 const ProductsDetailPage = () => {
-  // Use useParams to get the id from the URL
-  const { id } = useParams<{ id: string }>();
+  // Get the 'id' parameter from the URL
+  const { id } = useParams<{ id?: string }>(); // Make id optional with `id?: string`
 
-  // Convert the id to a number
-  const productId = parseInt(id , 10);
+  // Check if 'id' is not provided in the URL
+  if (id === undefined) {
+    return (
+      <Container className="mt-3">
+        <div>Product ID not provided.</div>
+      </Container>
+    );
+  }
 
-  // Find the product with the matching id
-  const productToDisplay = products.find(product => product.id === productId);
+  // Parse 'id' to an integer
+  const productId = parseInt(id, 10);
+
+  // Check if 'id' is not a valid integer
+  if (isNaN(productId)) {
+    return (
+      <Container className="mt-3">
+        <div>Invalid product ID.</div>
+      </Container>
+    );
+  }
+
+  // Find the product with the specified 'id' in the 'products' array
+  const productToDisplay = products.find((product) => product.id === productId);
 
   return (
     <Container className="mt-3">
-      
+      {/* Display product details if found, otherwise show a message */}
       {productToDisplay ? (
-        <ProductDetail {...productToDisplay}/>
+        <ProductDetail {...productToDisplay} />
       ) : (
         <div>Product not found.</div>
       )}
@@ -27,4 +45,3 @@ const ProductsDetailPage = () => {
 };
 
 export default ProductsDetailPage;
-

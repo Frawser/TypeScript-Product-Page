@@ -1,4 +1,4 @@
-import React from "react";
+//Mikael Fernadez
 import { Container } from "react-bootstrap";
 
 const Home = () => {
