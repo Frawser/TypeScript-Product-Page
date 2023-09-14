@@ -2,15 +2,18 @@ import { useContext, createContext, ReactNode, useState } from "react";
 import ShoppingCart from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
+// Define the props for ShoppingCartProvider component
 type ShoppingCartProviderProps = {
   children: ReactNode;
 };
 
+// Define the shape of a CartProduct
 type CartProduct = {
   id: number;
   quantity: number;
 };
 
+// Define the structure of the ShoppingCartContext
 type ShoppingCartContext = {
   openCart: () => void;
   closeCart: () => void;
@@ -22,28 +25,39 @@ type ShoppingCartContext = {
   cartProducts: CartProduct[];
 };
 
+// Create a context for the shopping cart
 const ShoppingCartContext = createContext({} as ShoppingCartContext);
 
+// Custom hook for accessing the shopping cart context
 export function useShoppingCart() {
   return useContext(ShoppingCartContext);
 }
 
+// ShoppingCartProvider component manages the shopping cart state
 export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
+  // Initialize cartProducts using local storage
   const [cartProducts, setCartProducts] = useLocalStorage<CartProduct[]>("shopping-cart", []);
+
+  // Initialize the cart open state
   const [cartOpen, setCartOpen] = useState(false);
 
-   const cartQuantity = cartProducts.reduce(
-    (quantity: number, product) => quantity + product.quantity, 0)
+  // Calculate the total quantity of items in the cart
+  const cartQuantity = cartProducts.reduce((quantity: number, product) => quantity + product.quantity, 0);
 
-    const openCart = () => setCartOpen(true);
-    const closeCart = () => setCartOpen(false);
-    
+  // Function to open the cart
+  const openCart = () => setCartOpen(true);
+
+  // Function to close the cart
+  const closeCart = () => setCartOpen(false);
+
+  // Function to get the quantity of a product in the cart
   function getProductQuantity(productId: number) {
     return (
       cartProducts.find((product) => product.id === productId)?.quantity || 0
     );
   }
 
+  // Function to increment the quantity of a product in the cart
   function incrementProductQuantity(productId: number) {
     setCartProducts((currProducts) => {
       const productIndex = currProducts.findIndex(
@@ -67,6 +81,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     });
   }
 
+  // Function to decrement the quantity of a product in the cart
   function decrementProductQuantity(productId: number) {
     setCartProducts((currProducts) => {
       const productIndex = currProducts.findIndex(
@@ -90,6 +105,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     });
   }
 
+  // Function to remove a product from the cart
   function removeProduct(productId: number) {
     setCartProducts((prevCartProducts) => {
       const productIndex = prevCartProducts.findIndex(
@@ -105,6 +121,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   }
 
   return (
+    // Provide the shopping cart context to its children
     <ShoppingCartContext.Provider
       value={{
         getProductQuantity,
@@ -117,8 +134,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         cartQuantity
       }}
     >
+      {/* Render the children components */}
       {children}
+      
+      {/* Render the ShoppingCart component and pass the cartOpen state */}
       <ShoppingCart cartOpen={cartOpen} />
     </ShoppingCartContext.Provider>
   );
 }
+

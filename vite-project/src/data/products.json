@@ -1,26 +1,30 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "Iphone 12 Pro Max",
-        "price": "10000",
+        "price": 10000,
+        "description": "The iPhone 12 Pro Max is the biggest iPhone you can buy, and it's also the best. The iPhone 12 Pro Max stands out compared to the rest of the iPhone 12 family with its larger 6.7-inch OLED display, which is bright, colorful and very sharp. The iPhone 12 Pro Max also features the best cameras you can get in an iPhone, with a main 12MP camera, a 12MP ultrawide camera and a 12MP telephoto camera. You also get a LiDAR sensor for low-light photography and AR, and the iPhone 12 Pro Max is the only iPhone to feature a 2.5x telephoto camera, which offers more zoom compared to the 2x telephoto camera on the iPhone 12 Pro and iPhone 12 Pro Max. The iPhone 12 Pro Max also features the longest battery life of any iPhone, lasting nearly 11 hours on our web surfing battery test.",
         "image": "/img/iphone-12.webp"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "Samsung 21 Ultra",
-        "price": "9000",
+        "price": 9000,
+        "description": "The Samsung Galaxy S21 Ultra is the best smartphone right now, period. It's a big phone with a big price and a big spec list. It has a 6.8-inch 3200 x 1440 OLED display with a 120Hz adaptive refresh rate, a Snapdragon 888 processor, 12GB or 16GB of RAM, 128GB to 512GB of storage, a 5,000 mAh battery, and a quad-camera system with a 108MP main sensor, a 12MP ultrawide sensor, and two 10MP telephoto sensors. The S21 Ultra also supports the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series. The S21 Ultra is the first Android phone to support the S Pen, which is a first for the S series.",
         "image": "/img/samsung.jpg"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Xiaomi Mi 11 Ultra",
-        "price": "8000",
+        "price": 8000,
+        "description": "The Xiaomi Mi 11 Ultra is the best Xiaomi phone you can buy right now, and it's a true flagship, with a Snapdragon 888 processor, 12GB of RAM, 256GB of storage, a 6.81-inch 3200 x 1440 OLED display with a 120Hz refresh rate, a 5,000 mAh battery, and a triple-camera system with a 50MP main sensor, a 48MP ultrawide sensor, and a 48MP telephoto sensor. The Mi 11 Ultra also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications. The Mi 11 Ultra also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications. The Mi 11 Ultra also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications. The Mi 11 Ultra also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications.",
         "image": "/img/xiomi.webp"
     },
     {
-        "id": "4", 
+        "id": 4, 
         "name": "OnePlus 9 Pro",
-        "price": "7000",
+        "price": 7000,
+        "description": "The OnePlus 9 Pro is the best OnePlus phone you can buy right now, and it's a true flagship, with a Snapdragon 888 processor, 8GB or 12GB of RAM, 128GB or 256GB of storage, a 6.7-inch 3216 x 1440 OLED display with a 120Hz refresh rate, a 4,500 mAh battery, and a quad-camera system with a 48MP main sensor, a 50MP ultrawide sensor, an 8MP telephoto sensor, and a 2MP monochrome sensor. The OnePlus 9 Pro also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications. The OnePlus 9 Pro also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications. The OnePlus 9 Pro also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications. The OnePlus 9 Pro also features a 1.1-inch OLED display on the back, which can be used as a viewfinder for the rear cameras, or to display notifications.",
         "image": "/img/oneplus.jpg"
     }
 ]
