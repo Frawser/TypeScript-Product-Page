@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "name": "Iphone 12 Pro Max",
+        "price": "10000",
+        "image": "/img/iphone-12.webp"
+    },
+    {
+        "id": "2",
+        "name": "Samsung 21 Ultra",
+        "price": "9000",
+        "image": "/img/samsung.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Xiaomi Mi 11 Ultra",
+        "price": "8000",
+        "image": "/img/xiomi.webp"
+    },
+    {
+        "id": "4", 
+        "name": "OnePlus 9 Pro",
+        "price": "7000",
+        "image": "/img/oneplus.jpg"
+    }
+]
