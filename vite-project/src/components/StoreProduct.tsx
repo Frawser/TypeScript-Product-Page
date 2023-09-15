@@ -1,4 +1,3 @@
-// Import necessary components and functions
 import { Card } from "react-bootstrap";
 import { formatCurrency } from "../utilities/currency";
 import { useShoppingCart } from "../context/ShoppingCartContext";

@@ -1,4 +1,3 @@
-// Import necessary components and libraries
 import {
   Navbar as NavBS,
   Nav,
